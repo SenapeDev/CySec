@@ -1,0 +1,249 @@
+:root {
+    --primary-color: #003B70;
+    --secondary-color: #0056A4;
+    --accent-color: #E4EBF1;
+    --success-color: #198754;
+    --warning-color: #FFC107;
+}
+
+body {
+    background-color: #F5F7FA;
+    color: #2C3E50;
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-balance {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.credit-card {
+    background: linear-gradient(135deg, #1a1a1a, #434343);
+    color: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-number {
+    letter-spacing: 3px;
+    font-size: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.mastercard-logo {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 60px;
+    height: 40px;
+}
+
+.transaction-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.transaction-amount.positive {
+    color: var(--success-color);
+}
+
+.transaction-amount.negative {
+    color: #DC3545;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+
+:root {
+    --primary-color: #003B70;
+    --secondary-color: #0056A4;
+    --accent-color: #E4EBF1;
+}
+
+body {
+    background-color: #F5F7FA;
+    color: #2C3E50;
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-control {
+    border: 1px solid #CBD5E0;
+
+    :root {
+        --primary-color: #003B70;
+        --secondary-color: #0056A4;
+        --accent-color: #E4EBF1;
+    }
+
+    body {
+        background-color: #F5F7FA;
+        color: #2C3E50;
+    }
+
+    .navbar-brand {
+        color: var(--primary-color) !important;
+        font-weight: 600;
+    }
+
+    .card {
+        border: none;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-control {
+        border: 1px solid #CBD5E0;
+        padding: 0.75rem;
+    }
+
+    .form-control:focus {
+        border-color: var(--secondary-color);
+        box-shadow: 0 0 0 0.2rem rgba(0, 59, 112, 0.15);
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color);
+        border: none;
+        padding: 0.75rem;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--secondary-color);
+    }
+
+    .security-features {
+        background-color: var(--accent-color);
+        border-left: 4px solid var(--primary-color);
+    }
+
+    .password-requirements li {
+        font-size: 0.875rem;
+        color: #64748B;
+    }
+
+    .form-text {
+        color: #64748B;
+    }
+
+    padding: 0.75rem;
+}
+
+.form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 59, 112, 0.15);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.75rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.security-features {
+    background-color: var(--accent-color);
+    border-left: 4px solid var(--primary-color);
+}
+
+.password-requirements li {
+    font-size: 0.875rem;
+    color: #64748B;
+}
+
+.form-text {
+    color: #64748B;
+}
+
+:root {
+    --primary-color: #003B70;
+    --secondary-color: #0056A4;
+    --accent-color: #E4EBF1;
+}
+
+body {
+    background-color: #F5F7FA;
+    color: #2C3E50;
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-control {
+    border: 1px solid #CBD5E0;
+    padding: 0.75rem;
+}
+
+.form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 59, 112, 0.15);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.75rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.security-features {
+    background-color: var(--accent-color);
+    border-left: 4px solid var(--primary-color);
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #64748B;
+}
+
+.password-container {
+    text-decoration: none;
+}
+
+.info-link:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}

@@ -1,0 +1,49 @@
+volumes:
+  sqldb:
+
+
+networks:
+  sqlnetwork:
+
+
+services:
+
+  app:
+    image: php:latest
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "./htdocs:/var/www/html"
+    ports:
+      - 8080:80
+    networks:
+      - sqlnetwork
+
+  db:
+    image: mysql:latest
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root-password
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: myapp
+      MYSQL_PASSWORD: myapp
+    ports:
+      - 3306:3306
+    volumes:
+      - sqldb:/var/lib/mysql
+    networks:
+      - sqlnetwork
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: unless-stopped
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 8181:80
+    networks:
+      - sqlnetwork
