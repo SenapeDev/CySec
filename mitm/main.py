@@ -25,8 +25,8 @@ def request(flow: http.HTTPFlow) -> None:
         # Decode the content of the request
         login_content = flow.request.content.decode()
         
-        # Save the login content to a file
-        with open('login_content.txt', 'w') as f:
-            f.write(login_content)
-        
+        # Append the login content to a file
+        with open("login_content.txt", "a") as file:
+            file.write(login_content + "\n")
+            
         print("Login content saved to login_content.txt\n")
