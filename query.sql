@@ -23,7 +23,7 @@ CREATE TABLE Transactions (
     ID_transaction INT AUTO_INCREMENT PRIMARY KEY,
     IBAN_sender VARCHAR(36) NOT NULL,
     IBAN_receiver VARCHAR(36) NOT NULL,
-    Date DATE NOT NULL,
+    Date DATETIME NOT NULL,
     Reason VARCHAR(255),
     Amount INT NOT NULL
 );
