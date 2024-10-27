@@ -33,6 +33,7 @@ services:
       - 3306:3306
     volumes:
       - sqldb:/var/lib/mysql
+      - ./query.sql:/docker-entrypoint-initdb.d/query.sql
     networks:
       - sqlnetwork
 
