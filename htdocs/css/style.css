@@ -27,12 +27,14 @@ body {
 }
 
 .credit-card {
-    background: linear-gradient(135deg, #1a1a1a, #434343);
+    width: calc(85.6mm * 1.2);
+    height: calc(53.98mm * 1.2);
+    border-radius: 12px;
+    background: linear-gradient(135deg, #032f57 0%, #0a6fc9 100%);
+    padding: 30px;
     color: white;
-    border-radius: 15px;
-    padding: 1.5rem;
     position: relative;
-    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-number {
@@ -72,86 +74,18 @@ body {
     background-color: var(--secondary-color);
 }
 
-
 :root {
     --primary-color: #003B70;
     --secondary-color: #0056A4;
     --accent-color: #E4EBF1;
 }
 
-body {
-    background-color: #F5F7FA;
-    color: #2C3E50;
-}
-
-.navbar-brand {
-    color: var(--primary-color) !important;
-    font-weight: 600;
-}
-
-.card {
-    border: none;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+.form-control {
+    border: 1px solid #CBD5E0;
 }
 
 .form-control {
     border: 1px solid #CBD5E0;
-
-    :root {
-        --primary-color: #003B70;
-        --secondary-color: #0056A4;
-        --accent-color: #E4EBF1;
-    }
-
-    body {
-        background-color: #F5F7FA;
-        color: #2C3E50;
-    }
-
-    .navbar-brand {
-        color: var(--primary-color) !important;
-        font-weight: 600;
-    }
-
-    .card {
-        border: none;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .form-control {
-        border: 1px solid #CBD5E0;
-        padding: 0.75rem;
-    }
-
-    .form-control:focus {
-        border-color: var(--secondary-color);
-        box-shadow: 0 0 0 0.2rem rgba(0, 59, 112, 0.15);
-    }
-
-    .btn-primary {
-        background-color: var(--primary-color);
-        border: none;
-        padding: 0.75rem;
-    }
-
-    .btn-primary:hover {
-        background-color: var(--secondary-color);
-    }
-
-    .security-features {
-        background-color: var(--accent-color);
-        border-left: 4px solid var(--primary-color);
-    }
-
-    .password-requirements li {
-        font-size: 0.875rem;
-        color: #64748B;
-    }
-
-    .form-text {
-        color: #64748B;
-    }
-
     padding: 0.75rem;
 }
 
@@ -164,10 +98,6 @@ body {
     background-color: var(--primary-color);
     border: none;
     padding: 0.75rem;
-}
-
-.btn-primary:hover {
-    background-color: var(--secondary-color);
 }
 
 .security-features {
@@ -182,52 +112,6 @@ body {
 
 .form-text {
     color: #64748B;
-}
-
-:root {
-    --primary-color: #003B70;
-    --secondary-color: #0056A4;
-    --accent-color: #E4EBF1;
-}
-
-body {
-    background-color: #F5F7FA;
-    color: #2C3E50;
-}
-
-.navbar-brand {
-    color: var(--primary-color) !important;
-    font-weight: 600;
-}
-
-.card {
-    border: none;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-}
-
-.form-control {
-    border: 1px solid #CBD5E0;
-    padding: 0.75rem;
-}
-
-.form-control:focus {
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 0.2rem rgba(0, 59, 112, 0.15);
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    border: none;
-    padding: 0.75rem;
-}
-
-.btn-primary:hover {
-    background-color: var(--secondary-color);
-}
-
-.security-features {
-    background-color: var(--accent-color);
-    border-left: 4px solid var(--primary-color);
 }
 
 .password-toggle {
