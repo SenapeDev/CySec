@@ -1,6 +1,5 @@
 <?php
 
-// Database configuration
 define('DB_HOST', 'db:3306');
 define('DB_USER', 'myapp');
 define('DB_PASS', 'myapp');

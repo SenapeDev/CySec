@@ -1,4 +1,3 @@
--- Tabella Users
 CREATE TABLE Users (
     User_ID INT AUTO_INCREMENT PRIMARY KEY,
     Name VARCHAR(50) NOT NULL,
@@ -8,7 +7,6 @@ CREATE TABLE Users (
     IBAN VARCHAR(36) NOT NULL UNIQUE
 );
 
--- Tabella Credit_cards
 CREATE TABLE Credit_cards (
     Card_ID INT AUTO_INCREMENT PRIMARY KEY,
     User_ID INT NOT NULL,
@@ -18,7 +16,6 @@ CREATE TABLE Credit_cards (
     FOREIGN KEY (User_ID) REFERENCES Users(User_ID)
 );
 
--- Tabella Transactions
 CREATE TABLE Transactions (
     ID_transaction INT AUTO_INCREMENT PRIMARY KEY,
     IBAN_sender VARCHAR(36) NOT NULL,

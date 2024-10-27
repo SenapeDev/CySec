@@ -51,5 +51,6 @@ $query->execute();
 
 // redirect the user to the login page
 header('Location: ../login.php');
-# TVB <3
+
+// TVB <3 by Daryn
 ?>

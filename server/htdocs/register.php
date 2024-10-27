@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#">

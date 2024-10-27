@@ -1,4 +1,3 @@
-<!-- Navbar -->
 <nav class="navbar navbar-light bg-white shadow-sm sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">

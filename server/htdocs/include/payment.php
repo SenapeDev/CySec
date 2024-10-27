@@ -17,19 +17,19 @@ $iban_receiver = $_POST['iban'];
 $amount = $_POST['amount'];
 $reason = $_POST['reason'];
 
-// Verifica che i campi non siano vuoti
+// Verify that the required fields are not empty
 if (empty($iban_receiver) || empty($amount) || empty($reason)) {
     header('Location: ../dashboard.php');
     exit;
 }
 
-// Verifica se l'IBAN del destinatario è valido
+// Verify that the sender and receiver are not the same
 if ($iban_receiver === $iban_sender) {
     header('Location: ../dashboard.php');
     exit;
 }
 
-// 1. Controlla il saldo disponibile dell'utente
+// Verify that the amount is greater than 0
 $sql_balance = "SELECT 
     (SUM(CASE WHEN IBAN_receiver = ? THEN Amount ELSE 0 END) - 
      SUM(CASE WHEN IBAN_sender = ? THEN Amount ELSE 0 END)) AS balance 
@@ -40,13 +40,13 @@ $stmt_balance->execute();
 $result_balance = $stmt_balance->get_result();
 $balance = $result_balance->fetch_assoc()['balance'] ?? 0;
 
-// 2. Verifica che l'utente abbia fondi sufficienti
+// Verify that the balance is greater than the amount
 if ($balance < $amount) {
     header('Location: ../dashboard.php');
     exit;
 }
 
-// 3. Effettua la transazione
+// Execute the payment
 $sql_insert = "INSERT INTO Transactions (IBAN_sender, IBAN_receiver, Date, Reason, Amount) 
                VALUES (?, ?, NOW(), ?, ?)";
 $stmt_insert = $connection->prepare($sql_insert);
@@ -58,7 +58,6 @@ if ($stmt_insert->execute()) {
     $_SESSION['error'] = "Errore durante l'elaborazione del pagamento.";
 }
 
-// 4. Chiudi la connessione e reindirizza l'utente
 $stmt_balance->close();
 $stmt_insert->close();
 $connection->close();
