@@ -4,6 +4,8 @@ Questo progetto esplora tecniche di attacco Man-in-the-Middle tramite ARP spoofi
 - [Configurazione del server](#1-configurazione-del-server)
 - [Configurazione del MitM](#2-Configurazione-del-MitM)
 
+Want to read this in [English](README_EN.md)?
+
 ## 1. Configurazione del server
 
 ### 1.1 Installazione di Nginx
