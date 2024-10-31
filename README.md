@@ -1,6 +1,9 @@
 # Attacco Man-in-the-Middle tramite ARP spoofing
 Questo progetto esplora tecniche di attacco Man-in-the-Middle tramite ARP spoofing, con l'obiettivo di intercettare, analizzare e modificare il traffico di rete tra un client e un server.
 
+- [Configurazione del server](#1-configurazione-del-server)
+- [Configurazione del MitM](#2-Configurazione-del-MitM)
+
 ## 1. Configurazione del server
 
 ### 1.1 Installazione di Nginx
