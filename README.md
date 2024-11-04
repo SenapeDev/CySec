@@ -83,7 +83,7 @@ $ sudo systemctl restart nginx
 Clonare la repository e avviare i container:
 
 ```
-$ git clone https://github.com/SenapeDev/CySec.git
+$ git clone https://github.com/SenapeDev/MitM-ARPspoofing.git
 $ cd server
 $ docker compose up --build -d
 ```
@@ -184,7 +184,7 @@ $ pip install mitmproxy
 
 ### 2.11 Installazione dello script per mitmproxy
 ```
-$ git clone https://github.com/SenapeDev/CySec.git
+$ git clone https://github.com/SenapeDev/MitM-ARPspoofing.git
 ```
 ### 2.12 Intercettazione e modifica delle richieste con mitmproxy
 Eseguire `mitmproxy` in modalità trasparente per intercettare e modificare il traffico HTTP:
