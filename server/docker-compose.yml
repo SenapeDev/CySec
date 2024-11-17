@@ -9,7 +9,7 @@ networks:
 services:
 
   app:
-    image: php:latest
+    image: php:8.2-apache
     restart: unless-stopped
     build:
       context: .
